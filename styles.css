@@ -1,0 +1,152 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #111; /* ダークブラック */
+    color: #fff;
+}
+
+header {
+    background-color: #001f3f; /* ダークブルー */
+    padding: 1em 0;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    animation: fadeIn 1s ease-in-out forwards;
+}
+
+/* フッターのスタイル */
+footer {
+    margin-top: 20px; /* フッターとの間に適切なマージンを追加 */
+}
+
+.push {
+    height: 40px;/*フッターと同じ高さに指定*/
+  }
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+h1 {
+    margin: 0;
+    font-size: 2.5em;
+    color: #39CCCC; /* ターコイズブルー */
+    line-height: 1.5; /* 行の高さを設定 */
+}
+
+/* サブタイトルに対するスタイルの追加 */
+h2 {
+    color: #39CCCC; /* ターコイズブルー */
+    border-bottom: 2px solid #39CCCC;
+    padding-bottom: 0.5em;
+    margin-top: 20px;
+    opacity: 0;
+    animation: fadeIn 1s ease-in-out forwards;
+}
+
+nav {
+    background-color: #004080; /* ダークネイビー */
+    overflow: hidden;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav li {
+    float: left;
+}
+
+nav a {
+    display: block;
+    color: #fff;
+    text-align: center;
+    padding: 1.5em 2em;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.2em;
+    transition: background-color 0.3s ease;
+}
+
+nav a:hover {
+    background-color: #0066cc; /* リンクブルー */
+}
+
+main {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #001f3f; /* ダークブルー */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+section {
+    margin-bottom: 20px;
+}
+
+footer {
+    background-color: #004080; /* ダークネイビー */
+    color: #fff;
+    text-align: center;
+    padding: 1em 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+/* 追加した動画のコンテナに対するスタイル */
+.video-container {
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 のアスペクト比を維持するためのパディング */
+    overflow: hidden;
+}
+
+/* 動画に対するスタイル */
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+/* 通常のスタイル */
+
+/* レスポンシブデザインのためのメディアクエリ */
+
+@media only screen and (max-width: 600px) {
+    /* 600px以下の画面サイズに適用するスタイル */
+
+    header {
+        padding: 0.5em 0;
+    }
+
+    h1 {
+        font-size: 1em;
+    }
+
+    h2 {
+        font-size: 1em;
+        margin-top: 15px;
+    }
+
+    nav a {
+        padding: 1em 1.5em;
+        font-size: 0.8em;
+    }
+
+    main {
+        padding: 20px;
+    }
+
+    .video-container {
+        padding-bottom: 75%; /* 4:3のアスペクト比を維持するためのパディング */
+    }
+}
