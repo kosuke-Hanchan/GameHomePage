@@ -1,0 +1,79 @@
+/*タブレット向け*/
+@media all and (max-width: 1000px){
+
+    .hint-content{
+        width:100%;
+    }
+
+    .review{
+        width:100%;
+    }
+}
+
+/* モバイル向け */
+@media all and (max-width: 670px){
+
+    
+    .top-logo{
+        width:50%;
+    }
+
+    .signup-text{
+        font-size:15px;
+    }
+
+    .main-heading{
+        font-size:35px;
+    }
+
+    .main-heading{
+        font-size:30px;
+    }
+
+    .hint-content h2{
+        font-size:25px;
+    }
+
+    .review img{
+        width:100%;
+    }
+
+    .sub-heading{
+        font-size:30px;
+    }
+
+    .movie{
+        width:80%;
+        margin:0 auto;
+    }
+
+    .movie-wrapper h2{
+        font-size:30px;
+    }
+
+    .signup-btn{
+        width:100%;
+    }
+
+    .header-right{
+        display:none;
+    }
+
+    .menu-icon{
+        display:block;
+      }
+
+      .footer-logo img{
+        padding-top:20px;
+        width:30%;
+    }
+
+    .footer-right a{
+        font-size:10px;
+    }
+
+    .footer-right span{
+        display:none;
+    }
+    
+}
