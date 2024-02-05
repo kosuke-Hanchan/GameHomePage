@@ -9,6 +9,7 @@ body {
 .header-box {
     height: 50px;
   }
+
 header {
     background-color: #5c5c5c; /* ダークブルー */
     padding: 1em 0;
@@ -18,6 +19,7 @@ header {
     animation: fadeIn 1s ease-in-out forwards;
     position: fixed;
     width: 100%;
+    height: 25px;
     top:0
     /* position: relative; */
     
@@ -84,9 +86,9 @@ article {
 
 h1 {
     margin: 0;
-    font-size: 2.5em;
+    font-size: 2em;
     color: #ffffff; /* ターコイズブルー */
-    line-height: 1.5; /* 行の高さを設定 */
+    line-height: 1; /* 行の高さを設定 */
 }
 
 /* サブタイトルに対するスタイルの追加 */
