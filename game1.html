@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="common.css">
+    <title>隕石を避けろ！TwinShips</title>
+</head>
+<body>
+    <header>
+        <div id="hamburger-icon" class="menu-toggle">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
+        <h1><a href="index.html">はんちゃんソフト</a></h1>
+        <nav id="menu">
+        
+            <a href="./index.html">ホーム</a>
+            <a href="./games.html">ゲーム一覧</a>
+            <a href="./privacy-policy.html">プライバシーポリシー</a>
+            <!-- 他のページへのリンクを追加 -->
+        </nav>
+        <div id="overlay"></div>
+    </header>
+
+
+    <div class="push"></div><!-- 余白を持たせる -->
+
+
+    <main>
+        <section id="overview">
+            <h2>ゲーム概要</h2>
+            <p>ようこそ！<br>このアクションゲームでは2つのキャラクターを操作してそれぞれ違う動きが要求されるぞ！高いスコアを獲るまで挑戦だ！</p>
+            <!-- 必要に応じてコンテンツを追加 -->
+        </section>
+        
+        <section id="features">
+            <h2>ゲーム特徴</h2>
+            <ul>
+                <li>飛んでくる隕石をとにかく避けまくる！</li>
+                <li>操作キャラは同時に2つ！</li>
+                <li>左右で違う動きを要求され頭の運動に！</li>
+                <!-- 追加の特徴を記述 -->
+            </ul>
+        </section>
+        
+        <section id="video">
+            <h2>プレイ映像</h2>
+            <div class="video-container">
+                <!-- プレイ動画を埋め込む（例：YouTubeの埋め込みコードを使用） -->
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/MO22OHqcLsc?si=6R38zDL5AprzZUeR" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            </div>
+        </section>
+        
+        <section id="download">
+            <h2>ダウンロード</h2>
+            <p>ゲームのダウンロードは以下リンクから！</p>
+            <a href='https://play.google.com/store/apps/details?id=com.KHanchan.TwinShips&pcampaignid=pcampaignidMKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1'>
+                <img alt='Google Play で手に入れよう' src='https://play.google.com/intl/en_us/badges/static/images/badges/ja_badge_web_generic.png' width='150' height='58'/>
+            </a>
+        </section>
+
+        <!-- プライバシーポリシーセクション -->
+        <section id="privacy-policy">
+        <h2>プライバシーポリシー</h3>
+        <p>当ウェブサイトでは、利用者のプライバシーを尊重し、利用者の個人情報を適切に管理・保護するために努めています。</p>
+        <p>収集される個人情報やその利用についての詳細については、プライバシーポリシーをご覧ください。</p>
+        <a href="./privacy-policy.html">プライバシーポリシー全文を読む</a>
+        </section>
+    </main>
+    
+   
+    <footer>
+        <p>&copy; 2024 はんちゃんソフト 全著作権所有。</p>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var mobileMenuButton = document.getElementById('hamburger-icon');
+            var navigation = document.getElementById('menu');
+            var overlay = document.getElementById('overlay');
+
+            mobileMenuButton.addEventListener('click', function () {
+                navigation.classList.toggle('open');
+                overlay.classList.toggle('open');
+            });
+
+            overlay.addEventListener('click', function () {
+                navigation.classList.remove('open');
+                overlay.classList.remove('open');
+            });
+        });
+    </script>
+</body>
+</html>

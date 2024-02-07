@@ -1,0 +1,59 @@
+
+main {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    justify-content: space-between;
+}
+
+.feature,
+.about {
+    flex: 0 1 calc(48% - 20px);
+    margin-bottom: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.feature h2,
+.about h2 {
+    color: #333;
+    font-size: 1.5em;
+    margin: 10px 0;
+}
+
+.feature p,
+.about p {
+    color: #555;
+    margin: 10px 0;
+}
+
+.feature a,
+.about a {
+    display: block;
+    background-color: #4CAF50; /* Green color */
+    color: #fff;
+    text-decoration: none;
+    padding: 10px;
+    text-align: center;
+    transition: background-color 0.3s ease;
+}
+
+.feature a:hover,
+.about a:hover {
+    background-color: #45a049; /* Darker green color on hover */
+}
+
+
+
+
+@media only screen and (max-width: 600px) {
+    .feature,
+    .about {
+        flex: 0 1 calc(100% - 20px);
+    }
+
+}

@@ -1,95 +1,7 @@
-body {
-    font-family: 'Arial', sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #e5e5e5; /* ダークブラック */
-    color: #000000;
-}
 
-.header-box {
-    height: 50px;
-  }
-
-header {
-    background-color: #5c5c5c; /* ダークブルー */
-    padding: 1em 0;
-    text-align: center;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    opacity: 0;
-    animation: fadeIn 1s ease-in-out forwards;
-    position: fixed;
-    width: 100%;
-    height: 25px;
-    top:0
-    /* position: relative; */
-    
-}
-footer {
-    background-color: #626262; /* ダークネイビー */
-    color: #fff;
-    text-align: center;
-    padding: 1em 0;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-}
 article {
     padding: 0 16px;
   }
-/* ハンバーガーメニューのアイコン */
-#hamburger-icon {
-    display: none;
-    position: absolute;
-    top: 10px;
-    left: 10px;
-    cursor: pointer;
-    font-size: 24px;
-    color: #ffffff;
-}
-
-/* メニューのスタイル */
-#menu {
-    display: none;
-    position: fixed;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 50%;
-    background-color: #646464;
-   
-    padding: 2em;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-}
-
-#menu a {
-    color: #f5f5f5;
-    text-decoration: none;
-    font-size: 20px;
-    display: block;
-    margin-bottom: 1em;
-}
-
-/* Animation for menu */
-#menu.open {
-    display: block;
-    animation: slideIn 0.5s ease-in-out;
-}
-
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
-}
-
-h1 {
-    margin: 0;
-    font-size: 2em;
-    color: #ffffff; /* ターコイズブルー */
-    line-height: 1; /* 行の高さを設定 */
-}
 
 /* サブタイトルに対するスタイルの追加 */
 h2 {
@@ -106,30 +18,6 @@ nav {
     overflow: hidden;
 }
 
-nav ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-}
-
-nav li {
-    float: left;
-}
-
-nav a {
-    display: block;
-    color: #ffffff;
-    text-align: center;
-    padding: 1.5em 2em;
-    text-decoration: none;
-    font-weight: bold;
-    font-size: 1.2em;
-    transition: background-color 0.3s ease;
-}
-
-nav a:hover {
-    background-color: #ffffff; /* リンクブルー */
-}
 
 main {
     max-width: 800px;
@@ -145,87 +33,13 @@ section {
 }
 
 
-/* 追加した動画のコンテナに対するスタイル */
-.video-container {
-    position: relative;
-    padding-bottom: 56.25%; /* 16:9 のアスペクト比を維持するためのパディング */
-    overflow: hidden;
-}
-
-/* 動画に対するスタイル */
-.video-container iframe {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-}
-
-/*フッターに文字が被らないよう空白で高さ調整*/
-.push {
-    height: 40px;/*フッターと同じ高さに指定*/
-  }
-
   
 /* 通常のスタイル */
 
 /* レスポンシブデザインのためのメディアクエリ */
 
 @media only screen and (max-width: 600px) {
-    /* 600px以下の画面サイズに適用するスタイル */
 
-    header {
-        padding: 0.5em 0;
-    }
 
-    h1 {
-        font-size: 1.5em;
-    }
 
-    h2 {
-        font-size: 1em;
-        margin-top: 15px;
-    }
-
-    nav a {
-        padding: 1em 1.5em;
-        font-size: 0.8em;
-    }
-
-    main {
-        padding: 40px;
-    }
-
-    .video-container {
-        padding-bottom: 75%; /* 4:3のアスペクト比を維持するためのパディング */
-    }
-
-    /* ハンバーガーメニューのアイコンを表示 */
-    #hamburger-icon {
-        display: block;
-    }
-
-    main {
-        padding-left: 0;
-    }
-
-    #menu {
-        width: 40%;
-        z-index: 2;
-    }
-    #overlay {
-        display: none;
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background-color: rgba(209, 209, 209, 0.5); /* 半透明の黒 */
-        z-index: 1;
-    }
-    
-    /* 追加: オーバーレイが表示されたときのスタイル */
-    #overlay.open {
-        display: block;
-    }
 }

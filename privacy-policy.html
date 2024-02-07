@@ -4,20 +4,27 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="privacy.css">
+    <link rel="stylesheet" href="common.css">
     <title>プライバシーポリシー</title>
 </head>
+
 <body>
-    <div class="header-box"></div>
     <header>
-        <span id="hamburger-icon">&#9776;</span>
-        <h1>はんちゃんソフト</h1>
+        <div id="hamburger-icon" class="menu-toggle">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
+        <h1><a href="index.html">はんちゃんソフト</a></h1>
+        <nav id="menu">
+        
+            <a href="./index.html">ホーム</a>
+            <a href="./games.html">ゲーム一覧</a>
+            <a href="./privacy-policy.html">プライバシーポリシー</a>
+            <!-- 他のページへのリンクを追加 -->
+        </nav>
+        <div id="overlay"></div>
     </header>
-    <div id="overlay"></div> <!-- 追加: オーバーレイ -->
-    <div id="menu">
-        <a href="#">ホーム</a>
-        <a href="#">ゲーム一覧</a>
-        <span id="close-menu">&times;</span>
-    </div>
 
     <main>
         <article>
@@ -121,29 +128,26 @@
     </main>
 
 
-    <footer class="push">
+    <footer>
         <p>&copy; 2024 はんちゃんソフト 全著作権所有。</p>
     </footer>
 
     <script>
-// script.js
-// Toggle the menu on hamburger icon click
-document.getElementById('hamburger-icon').addEventListener('click', function() {
-    document.getElementById('menu').classList.toggle('open');
-    document.getElementById('overlay').classList.toggle('open');
-});
+        document.addEventListener('DOMContentLoaded', function () {
+            var mobileMenuButton = document.getElementById('hamburger-icon');
+            var navigation = document.getElementById('menu');
+            var overlay = document.getElementById('overlay');
 
-// Close the menu when the close icon is clicked
-document.getElementById('close-menu').addEventListener('click', function() {
-    document.getElementById('menu').classList.remove('open');
-    document.getElementById('overlay').classList.remove('open');
-});
+            mobileMenuButton.addEventListener('click', function () {
+                navigation.classList.toggle('open');
+                overlay.classList.toggle('open');
+            });
 
-// Close the menu and overlay when overlay is clicked
-document.getElementById('overlay').addEventListener('click', function() {
-    document.getElementById('menu').classList.remove('open');
-    document.getElementById('overlay').classList.remove('open');
-});
+            overlay.addEventListener('click', function () {
+                navigation.classList.remove('open');
+                overlay.classList.remove('open');
+            });
+        });
     </script>
 </body>
 </html>
