@@ -7,17 +7,6 @@ h2 {
     /* display:block */
 }
 
-
-main {
-    max-width: 800px;
-    margin: 20px auto;
-    padding: 20px;
-    background-color: #fff;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    justify-content: space-between;
-    border-radius: 10px;
-}
-
 section {
     margin-bottom: 20px;
 }

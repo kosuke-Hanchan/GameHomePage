@@ -1,0 +1,72 @@
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        var mobileMenuButton = document.getElementById('hamburger-icon');
+        var navigation = document.getElementById('menu');
+        var overlay = document.getElementById('overlay');
+
+        mobileMenuButton.addEventListener('click', function () {
+            navigation.classList.toggle('open');
+            overlay.classList.toggle('open');
+        });
+
+        overlay.addEventListener('click', function () {
+            navigation.classList.remove('open');
+            overlay.classList.remove('open');
+        });
+    });
+</script>
+
+
+<header>
+    <div id="hamburger-icon" class="menu-toggle">
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+    </div>
+    <h1><a href="index.html">はんちゃんソフト</a></h1>
+    <nav id="menu">
+        <div class="dropdown">
+            <a href="./index.html">ホーム</a>
+        </div>
+
+        <div class="dropdown">
+            <a href="#" class="dropbtn">ゲーム一覧</a>
+            <div class="dropdown-content">
+                <a href="./game1.html">最新のゲーム</a>
+                <a href="./game2.html">おすすめのゲーム</a>
+                <!-- 他のゲームのリンクを追加 -->
+            </div>
+        </div>
+        <div class="dropdown">
+            <a href="#" class="dropbtn">製品一覧</a>
+            <div class="dropdown-content">
+                <a href="./product1.html">製品1</a>
+                <a href="./product2.html">製品2</a>
+                <!-- 他の製品のリンクを追加 -->
+            </div>
+        </div>
+        <div class="dropdown">
+            <a href="./privacy-policy.html">プライバシーポリシー</a>
+        </div>
+        <!-- 他のメニューアイテムを追加 -->
+    </nav>
+    <div id="overlay"></div>
+</header>
+
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+    var mobileMenuButton = document.getElementById('hamburger-icon');
+    var navigation = document.getElementById('menu');
+    var overlay = document.getElementById('overlay');
+
+    mobileMenuButton.addEventListener('click', function () {
+        navigation.classList.toggle('open');
+        overlay.classList.toggle('open');
+    });
+
+    overlay.addEventListener('click', function () {
+        navigation.classList.remove('open');
+        overlay.classList.remove('open');
+    });
+});
+</script>

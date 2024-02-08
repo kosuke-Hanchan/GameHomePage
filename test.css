@@ -1,0 +1,71 @@
+/* 他のスタイルリセット */
+body, h1, h2, p, a {
+    margin: 0;
+    padding: 0;
+}
+
+/* ヘッダーのスタイル */
+header {
+    background-color: #3498db; /* 好みの背景色に設定 */
+    color: #fff; /* 好みのテキスト色に設定 */
+    padding: 20px;
+    text-align: center;
+}
+
+/* ヘッダー内のh1のスタイル */
+header h1 {
+    font-size: 36px; /* 好みのフォントサイズに設定 */
+    margin-bottom: 10px;
+}
+
+/* ナビゲーションメニューのスタイル */
+#menu {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-around;
+}
+
+#menu a {
+    text-decoration: none;
+    color: #fff; /* 好みのテキスト色に設定 */
+    font-size: 18px; /* 好みのフォントサイズに設定 */
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    padding: 10px 20px;
+}
+
+#menu a:hover {
+    background-color: #2980b9; /* ホバー時の背景色を設定 */
+}
+
+/* ドロップダウンのスタイル */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #2980b9; /* 好みの背景色に設定 */
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+    border-radius: 5px;
+    z-index: 1;
+    width: 100%; /* ドロップダウンを親要素と同じ幅にする */
+}
+
+.dropdown-content a {
+    color: #fff; /* 好みのテキスト色に設定 */
+    padding: 12px 16px;
+    display: block;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.dropdown-content a:hover {
+    background-color: #3498db; /* ホバー時の背景色を設定 */
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}

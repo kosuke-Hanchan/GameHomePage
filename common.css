@@ -1,3 +1,12 @@
+main {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    justify-content: space-between;
+    border-radius: 10px;
+}
 
 body {
     font-family: 'Arial', sans-serif;
@@ -14,13 +23,16 @@ header {
     padding: 1em 0;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     position: relative;
-
 }
+
 header a{
     color: #fff;
     text-decoration: none;
 }
 
+header h1{
+    font-size: 25px;
+}
 
 .push {
     height: 40px;/*高さ調整に使用*/
@@ -37,63 +49,6 @@ footer {
 }
 
 
-.menu-toggle {
-    display: none;
-    cursor: pointer;
-    position: absolute;
-    top: 10px;
-    left: 10px;
-}
-
-.menu-toggle .bar {
-    width: 30px;
-    height: 3px;
-    background-color: #fff;
-    margin: 6px 0;
-    transition: 0.4s;
-}
-
-#menu {
-    display: none;
-    position: fixed;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 50%;
-    background-color: #4CAF50; /* Green color */
-    padding: 2em;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-    z-index: 2;
-}
-
-#menu a {
-    color: #fff;
-    text-decoration: none;
-    font-size: 18px;
-    display: block;
-    margin-bottom: 1em;
-}
-
-#menu.open {
-    display: block;
-    animation: slideIn 0.5s ease-in-out;
-}
-
-#overlay {
-    display: none;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
-    z-index: 1;
-}
-
-#overlay.open {
-    display: block;
-}
-
 h1 {
     margin: 0;
     font-size: 2.5em;
@@ -101,8 +56,75 @@ h1 {
     line-height: 1.5;
 }
 
-@media only screen and (max-width: 600px) {
+nav a:hover {
+    background-color: #0b5d0069; /* リンクブルー */
+}
 
+/* --PCのみ-- */
+@media only screen and (min-width: 601px) {
+
+    /* ナビゲーションメニューのスタイル */
+    #menu {
+
+        margin-top: 20px;
+        display: flex;
+        justify-content: space-around;
+        background-color: #40623b69; /* リンクブルー */
+    }
+
+    #menu a {
+        text-decoration: none;
+        color: #fff; /* 好みのテキスト色に設定 */
+        font-size: 18px; /* 好みのフォントサイズに設定 */
+        border-radius: 5px;
+        transition: background-color 0.3s ease;
+        padding: 10px 20px;
+        white-space: nowrap; /* テキストの折り返しを無効にする */  
+    }
+
+
+    /* ドロップダウンのスタイル */
+    .dropdown {
+        position: relative;
+        display: inline-block;
+    }
+
+    .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: #55b55a; /* 好みの背景色に設定 */
+        box-shadow: 2px  1px 1px 1px rgba(0,0,0,0.2);
+        border-radius: 5px;
+        z-index: 1;
+        width:150%; /* ドロップダウンの幅を内容に合わせる */
+        left: -25%;
+    }
+
+    .dropdown-content a {
+        color: #fff; /* 好みのテキスト色に設定 */
+        padding: 12px 16px;
+        display: block;
+        text-decoration: none;
+        transition: background-color 0.3s ease;
+    }
+
+    .dropdown-content a:hover {
+        background-color: #0b5d0069; /* ホバー時の背景色を設定 */
+    }
+
+    .dropdown:hover .dropdown-content {
+        display: block;
+    }
+
+
+}
+
+/* --スマホのみ-- */
+@media only screen and (max-width: 600px) {
+    .dropdown-content {
+        display: none;
+    }
+    
     header {
         padding: 0.5em 0;
         background-color: #4CAF50; /* Green color */
@@ -113,28 +135,6 @@ h1 {
         z-index: 1;
         width: 100%;
         top:0;
-    }
-    .menu-toggle {
-        display: block;
-    }
-
-    #menu {
-        width: 50%;
-        z-index: 2;
-    }
-
-    #overlay {
-        display: none;
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background-color: rgba(0, 0, 0, 0.5);
-        z-index: 1;
-    }
-    #overlay.open {
-        display: block;
     }
 
     h1 {
@@ -150,7 +150,63 @@ h1 {
         margin-top: 15px;
     }
 
-    nav a:hover {
-        background-color: #0b5d0069; /* リンクブルー */
+
+
+
+    /* ---以下ハンバーガーメニュー用--- */
+    .menu-toggle {
+        display: block;
+        cursor: pointer;
+        position: absolute;
+        top: 10px;
+        left: 10px;
+    }
+    .menu-toggle .bar {
+        width: 30px;
+        height: 3px;
+        background-color: #fff;
+        margin: 6px 0;
+        transition: 0.4s;
+    }
+
+    #menu.open {
+        display: block;
+        animation: slideIn 0.5s ease-in-out;
+    }
+
+    #menu {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 50%;
+        background-color: #4CAF50; /* Green color */
+        padding: 2em;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+        z-index: 2;
+    }
+    
+    #menu a {
+        color: #fff;
+        text-decoration: none;
+        font-size: 18px;
+        display: block;
+        margin-bottom: 1em;
+    }
+    
+    #overlay.open {
+        display: block;
+    }
+
+    #overlay {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5);
+        z-index: 1;
     }
 }
