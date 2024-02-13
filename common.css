@@ -69,7 +69,7 @@ nav a:hover {
         margin-top: 20px;
         display: flex;
         justify-content: space-around;
-        background-color: #40623b69; /* リンクブルー */
+        background-color: #4CAF50; /* リンクブルー */
     }
 
     #menu a {
@@ -98,6 +98,8 @@ nav a:hover {
         z-index: 1;
         width:150%; /* ドロップダウンの幅を内容に合わせる */
         left: -25%;
+        border-style: solid;
+        border-color: #ffffff;
     }
 
     .dropdown-content a {
